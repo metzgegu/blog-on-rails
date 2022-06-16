@@ -2,12 +2,12 @@
 
 <p><%= @article.body %></p>
 
-<ul>
-  <li><%= link_to "Edit", edit_article_path(@article) %></li>
+<ul class="horizontal">
+  <li><%= link_to "Edit", edit_article_path(@article), class: "button" %></li>
   <li><%= link_to "Destroy", article_path(@article), data: {
                     method: :delete,
                     confirm: "Are you sure?"
-                  } %></li>
+                  }, class: "button" %></li>
 </ul>
 
 <h2>Comments</h2>
