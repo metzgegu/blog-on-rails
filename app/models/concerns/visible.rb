@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
+# Visible module
 module Visible
   extend ActiveSupport::Concern
 
-  VALID_STATUSES = ['public', 'private', 'archived']
+  VALID_STATUSES = %w[public private archived].freeze
 
   class_methods do
     def public_count
@@ -17,4 +20,3 @@ module Visible
     status == 'archived'
   end
 end
-  
